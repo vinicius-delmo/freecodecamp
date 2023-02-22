@@ -18,8 +18,8 @@ console.log(sameTypeOfPokemons);
 // Alterar o nome dos tipos dos pokemons de inglês para português, ex.: Fire => Fogo
 
 const pokemonsInPTBR = pokemons.map((pokemons) => {
-  const changeTypesToPtBR = pokemons.type.map((type) => changeTypesToPtBR[type]);
-  return { ...pokemons, type: newTypesInPtBR };
+  const changeTypesToPtBR = pokemons.type.map((type) => pokemonTypesInPtBR[type]);
+  return { ...pokemons, type: changeTypesToPtBR };
 });
 
 console.log(pokemonsInPTBR);
