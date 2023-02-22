@@ -5,21 +5,21 @@ import { pokemonTypesInPtBR } from "./data.js";
 const searchPokemon = (arrPokemon, name) =>
   arrPokemon.find((pokemons) => pokemons.name === name);
 
-const pokemon = searchPokemon(pokemons, "pidgeot");
-console.log(pokemon);
+const pokemonData = searchPokemon(pokemons, "pidgeot");
+console.log(pokemonData);
 //Listar todos os pokemons de um mesmo tipo
 
 const filterPokemons = (pokemonArray, type) =>
   pokemonArray.filter((pokemons) => pokemons.type.includes(type));
 
-const sameType = filterPokemons(pokemons, "bug");
-console.log(sameType);
+const sameTypeOfPokemons = filterPokemons(pokemons, "bug");
+console.log(sameTypeOfPokemons);
 
 // Alterar o nome dos tipos dos pokemons de inglês para português, ex.: Fire => Fogo
 
-const pokemonsPT = pokemons.map((pokemons) => {
-  const newTypesInPtBR = pokemons.type.map((type) => pokemonTypesInPtBR[type]);
+const pokemonsInPTBR = pokemons.map((pokemons) => {
+  const changeTypesToPtBR = pokemons.type.map((type) => changeTypesToPtBR[type]);
   return { ...pokemons, type: newTypesInPtBR };
 });
 
-console.log(pokemonsPT);
+console.log(pokemonsInPTBR);
